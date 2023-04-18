@@ -1,0 +1,15 @@
+package com.roleservice.roles.entity.common;
+
+public enum APITypes {
+	
+	USER("USER"), ROLE("ROLE"), INVOICE("INVOICE"), BUSSINESS("BUSSINESS"), BANK("BANK"), ACH("ACH"), CHECK("CHECK"),
+	CUSTOMERVENDOR("CUSTOMERVENDOR"), DASHBOARD("DASHBOARD"), WORKFLOW("WORKFLOW"), BILL("BILL"), SETTINGS("SETTINGS"),
+	CARD("CARD"), TRANSACTIONS("TRANSACTIONS"), PAYMENT_FILES("PAYMENT_FILES"),
+	INVOICE_CAPTURE("INVOICE_CAPTURE"),BILLING("BILLING");
+	
+	private String  apiType;
+	private APITypes(String type) {
+		this.apiType = type;
+	}
+
+}
