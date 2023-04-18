@@ -24,7 +24,6 @@ import com.roleservice.roles.exceptions.RoleNotFound;
 import com.roleservice.roles.exceptions.UserNotFound;
 import com.roleservice.roles.service.RoleService;
 import com.roleservice.roles.utils.StringUtilities;
-
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 
@@ -33,24 +32,24 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/api/role")
 @Slf4j
 public class RoleController {
-	
+
 	@Autowired
 	RoleService roleService;
-	
+
 	@Autowired
 	StringUtilities stringUtilities;
-	
+
 	@RequestMapping(path = "/create",method = RequestMethod.POST,produces = MediaType.APPLICATION_JSON_VALUE )
 	@PreAuthorize("hasAuthority('ROLE_CREATE')")
 	@ResponseStatus(value = HttpStatus.OK)
 	@Transactional
 	public ResponseEntity<RoleEntity> create( @RequestBody Role request) throws NoSuchAlgorithmException, UnsupportedEncodingException, RoleNotFound {
-		
+
 		System.out.println(request.getRoleName());
 		log.info(StringUtilities.buildString("Create Role Request: ", request.toJson()));
 		RoleEntity roleEntity = roleService.create(request);
 		return new ResponseEntity<RoleEntity>(roleEntity,HttpStatus.OK);
-		
+
 	}
 
 	@RequestMapping(path = "/get",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -94,9 +93,9 @@ public class RoleController {
 		if (businessId == null) {
 			throw new BussinessNotFound("Business id not found");
 		}
-		
+
 		roleService.setPermission(permission, businessId);
-		
+
 	}
-	
+
 }

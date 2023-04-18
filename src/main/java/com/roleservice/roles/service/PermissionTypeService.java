@@ -1,11 +1,9 @@
 package com.roleservice.roles.service;
 
 import java.util.List;
-
 import com.roleservice.roles.entity.PermissionTypeEntity;
 import com.roleservice.roles.entity.common.PermissionsType;
 import com.roleservice.roles.exceptions.PermissionTypeNotFound;
-import com.roleservice.roles.exceptions.PermissionsTypeNotFound;
 
 public interface PermissionTypeService {
 

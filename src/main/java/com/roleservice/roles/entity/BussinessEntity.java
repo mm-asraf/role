@@ -1,7 +1,5 @@
 package com.roleservice.roles.entity;
 
-import com.roleservice.roles.entity.common.APITypes;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

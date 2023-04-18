@@ -1,9 +1,7 @@
 package com.roleservice.roles.entity;
 
 import java.io.Serializable;
-
 import com.roleservice.roles.entity.common.PermissionsType;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

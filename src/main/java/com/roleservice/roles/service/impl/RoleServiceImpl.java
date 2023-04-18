@@ -6,10 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.roleservice.roles.entity.APIEntity;
 import com.roleservice.roles.entity.PermissionTypeEntity;
 import com.roleservice.roles.entity.RoleEntity;
@@ -29,7 +27,6 @@ import com.roleservice.roles.repository.RoleRepository;
 import com.roleservice.roles.repository.UserRepository;
 import com.roleservice.roles.service.RoleService;
 import com.roleservice.roles.utils.Utils;
-
 import lombok.extern.log4j.Log4j2;
 
 @Service
